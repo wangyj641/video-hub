@@ -18,7 +18,7 @@ main()
 // async function main() {
 //   const user = await prisma.user.create({
 //     data: {
-//       name: "wangyj641",
+//       name: "Bill Andmson",
 //       avatar:
 //         "https://p3-passport.byteimg.com/img/user-avatar/585e1491713363bc8f67d06c485e8260~100x100.awebp",
 //     },

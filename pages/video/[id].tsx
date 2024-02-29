@@ -1,8 +1,7 @@
 import React from "react";
 import { GetServerSideProps } from "next";
-import prisma from "../lib/prisma";
-import { makeSerializable } from "../lib/util";
-import VideoList from "@/components/video-list";
+import prisma from "../../lib/prisma";
+import { makeSerializable } from "../../lib/util";
 import { Video, User } from "@prisma/client";
 
 type Props = {
@@ -18,16 +17,19 @@ export default function Page({ data }: Props) {
       <header className="flex justify-between items-center p-3 bg-white shadow">
         <h1 className="font-bold text-2xl">Video Hub</h1>
       </header>
-      <main className="px-3 mt-3">
-        <VideoList className="grid grid-cols-2 gap-2" data={data} />
-      </main>
     </div>
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  const data = await prisma.video.findMany({
-    include: { author: true },
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const data = await prisma.video.findUnique({
+    include: {
+      chapter: true,
+      author: true,
+    },
+    where: {
+      id: Number(context.params.id),
+    },
   });
 
   return {
