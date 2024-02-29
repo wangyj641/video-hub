@@ -2,6 +2,7 @@ import React from "react";
 import { GetServerSideProps } from "next";
 import prisma from "../lib/prisma";
 import { makeSerializable } from "../lib/util";
+import VideoList from "@/components/video-list";
 import { Video, User } from "@prisma/client";
 
 type Props = {
@@ -13,8 +14,14 @@ type Props = {
 export default function Page({ data }: Props) {
   console.log(data);
   return (
-    <div className="max-w-5xl px-3 mx-auto">
-      <h1>首页gg</h1>
+    <div className="max-w-3xl mx-auto">
+      <header className="flex justify-between items-center p-3 bg-white shadow">
+        <h1 className="font-bold text-2xl">Next Video</h1>
+
+      </header>
+      <main className="px-3 mt-3">
+        <VideoList className="grid grid-cols-2 gap-2" data={data} />
+      </main>
     </div>
   );
 }
