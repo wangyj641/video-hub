@@ -1,14 +1,14 @@
 import React, { useRef, useEffect } from "react";
 import { GetServerSideProps } from "next";
 import Link from "next/link";
-import Image from "next/image";
+//import Image from "next/image";
 import prisma from "@/lib/prisma";
 import { makeSerializable } from "@/lib/util";
 import { Video, User, Chapter } from "@prisma/client";
 import useSWRInfinite from "swr/infinite";
 import useOnScreen from "@/hooks/useOnScreen";
 
-import img1 from '../../public/GettyImages-187514202-1.jpg'
+const img1 = 'https://www.rd.com/wp-content/uploads/2020/02/GettyImages-187514202-1.jpg'
 
 type Props = {
   video: Video & {
@@ -32,6 +32,7 @@ const getKey = (pageIndex, previousPageData, videoId) => {
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 export default function Page({ video }: Props) {
+  // To monitor whether the Div element is shown or not
   const ref: any = useRef<HTMLDivElement>();
   const onScreen: boolean = useOnScreen<HTMLDivElement>(ref);
 
@@ -60,7 +61,7 @@ export default function Page({ video }: Props) {
     <div className="max-w-5xl px-3 mx-auto pb-5">
       <h1 className="text-3xl my-4 text-center">{video.title}</h1>
       <div className="text-center">
-        <Image src={img1} width={320} height={180} alt={video.title} />
+        <img src={img1} width={320} height={180} alt={video.title} />
       </div>
       <div className="p-3">{video.desc}</div>
       <h2 className="text-xl my-2">Chapter videos</h2>
@@ -76,7 +77,7 @@ export default function Page({ video }: Props) {
                 >
                   <Link href={`/video/chapter/${item.id}`} legacyBehavior>
                     <a className="mx-auto">
-                      <Image
+                      <img
                         className="aspect-video"
                         src={img1}
                         width={160}

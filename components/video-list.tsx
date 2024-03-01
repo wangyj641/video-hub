@@ -1,8 +1,9 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
+//import Image from "next/image";
 import { Video, User } from "@prisma/client";
-import img1 from '../public/GettyImages-187514202-1.jpg'
+
+const img1 = 'https://www.rd.com/wp-content/uploads/2020/02/GettyImages-187514202-1.jpg'
 
 type Props = {
   className?: string;
@@ -21,14 +22,14 @@ type ItemProps = {
   };
 };
 
-//https://www.rd.com/wp-content/uploads/2020/02/GettyImages-187514202-1.jpg
+
 
 function VideoItem({ item, horizontal, editable }: ItemProps) {
   return (
     <div className="ring-1 ring-gray-200 bg-white p-2 flex flex-col justify-center" key={item.id}>
       <div className={`flex gap-3 ${horizontal ? "flex-row test-horizontal" : "flex-col test-vertical"}`}>
         <Link href={`/video/${item.id}`} legacyBehavior>
-          <Image src={img1} width={160} height={90} alt={item.title} />
+          <img src={img1} width={160} height={90} alt={item.title} />
         </Link>
         <Link href={`/video/${item.id}`} legacyBehavior>
           <div>
