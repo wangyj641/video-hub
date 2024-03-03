@@ -20,7 +20,9 @@ export default function useOnScreen<T extends Element>(
       observer.observe(ref.current);
     }
     return () => {
-      observer.unobserve(ref.current);
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
     };
   }, []); //只在挂载的时候监听一次
   return isIntersecting;

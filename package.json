@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@custom-react-hooks/use-on-screen": "^1.4.19",
     "@prisma/client": "^5.10.2",
     "next": "14.1.0",
     "react": "^18",
