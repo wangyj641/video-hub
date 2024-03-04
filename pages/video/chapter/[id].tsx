@@ -9,6 +9,10 @@ type Props = {
 };
 
 export default function Page({ chapter }: Props) {
+  //http://alicdn.yxgapp.com/miniVideos/2dbd28c8-6980-43bc-b30c-148333ef67d4.mp4
+  //chapter.url = 'https://www.youtube.com/watch?v=-jyDTVjKDMY'
+  console.log(chapter.url);
+
   return (
     <div>
       <div className="aspect-video">
