@@ -13,7 +13,7 @@ type Props = {
 };
 
 export default function Page({ data }: Props) {
-  console.log(data);
+  //console.log(data);
   return (
     <div className="max-w-3xl mx-auto">
       <header className="flex justify-between items-center p-3 bg-white shadow">

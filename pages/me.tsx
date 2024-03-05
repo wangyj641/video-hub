@@ -1,5 +1,5 @@
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
-import { unstable_getServerSession } from "next-auth/next";
+import { getServerSession } from "next-auth/next";
 import prisma from "@/lib/prisma";
 import { Video, User } from "@prisma/client";
 import { makeSerializable } from "@/lib/util";
@@ -25,7 +25,7 @@ export default function Page({ data }) {
 }
 
 export async function getServerSideProps(context) {
-  const session = await unstable_getServerSession(
+  const session = await getServerSession(
     context.req,
     context.res,
     authOptions
