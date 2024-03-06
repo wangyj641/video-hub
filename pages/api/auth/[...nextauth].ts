@@ -25,18 +25,22 @@ export const authOptions: NextAuthOptions = {
         },
       },
       async authorize(credentials, req) {
-        console.log(credentials);
+        console.log("0000000000000", credentials);
         // TODO
-        // const maybeUser= await prisma.user.findFirst({where:{
-        //   email: credentials.email,
-        //  }})
+        const maybeUser = await prisma.user.findFirst({
+          where: {
+            email: credentials.email,
+          },
+        });
 
-        const user = {
-          id: "cl95b4ny10000fjnuhm7rvys5",
-          name: "Yongjun Wang",
-          image: "https://avatars.githubusercontent.com/u/9312044?v=4",
-          email: "to_wyj@126.com",
-        };
+        console.log("111111111111", maybeUser);
+
+        // const user = {
+        //   id: "cl95b4ny10000fjnuhm7rvys5",
+        //   name: "fake user",
+        //   image: "https://avatars.githubusercontent.com/u/9312044?v=4",
+        //   email: "to_wyj@126.com",
+        // };
 
         if (user) {
           // 返回的对象将保存才JWT 的用户属性中

@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 //import { ThemeProvider, CSSReset } from '@chakra-ui/core'
 
-export default function LoginComp({ csrfToken }) {
+export default function Login({ csrfToken }) {
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
       <Tabs className="w-96 p-5 border rounded-lg bg-white">
@@ -24,7 +24,7 @@ export default function LoginComp({ csrfToken }) {
           className="py-8"
           fontWeight="extrabold"
         >
-          Next Video App
+          Next Video Hub
         </Text>
         <TabList>
           <Tab>密码登录</Tab>

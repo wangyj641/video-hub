@@ -14,20 +14,16 @@ main()
     await prisma.$disconnect();
   });
 
-// Insert data to table: user
-// async function main() {
-//   const user = await prisma.user.create({
-//     data: {
-//       name: "Bill Andmson",
-//       avatar:
-//         "https://p3-passport.byteimg.com/img/user-avatar/585e1491713363bc8f67d06c485e8260~100x100.awebp",
-//     },
-//   });
-//   console.log(user);
-// }
-
 // Insert data to tables: category, chapter and video
 async function main() {
+  await prisma.user.create({
+    data: {
+      id: "abc",
+      name: "Bill Andmson",
+      email: "bill@prisma.io",
+    },
+  });
+
   const category = await prisma.category.create({
     data: {
       name: "数学",
@@ -53,7 +49,7 @@ async function main() {
       pic: example.data.cover_url,
       desc: example.data.brief,
       categoryId: category.id,
-      authorId: 1,
+      authorId: "abc",
       chapter: {
         createMany: {
           data: chapters,
