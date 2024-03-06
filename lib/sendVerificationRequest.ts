@@ -5,7 +5,6 @@ import { Theme } from "next-auth";
 export async function sendVerificationRequest(
   params: SendVerificationRequestParams
 ) {
-  console.log("----------123---------- sendVerificationRequest", params);
   const { identifier, url, provider, theme } = params;
   const { host } = new URL(url);
   const transport = createTransport(provider.server);
@@ -17,7 +16,6 @@ export async function sendVerificationRequest(
     html: html({ url, host, theme }),
   });
 
-  console.log("-------234------------- sendVerificationRequest result", result);
   const failed = result.rejected.concat(result.pending).filter(Boolean);
   if (failed.length) {
     throw new Error(`Email(s) (${failed.join(", ")}) could not be sent`);
