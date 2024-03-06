@@ -33,9 +33,9 @@ export const authOptions: NextAuthOptions = {
 
         const user = {
           id: "cl95b4ny10000fjnuhm7rvys5",
-          name: "xiaoma",
+          name: "Yongjun Wang",
           image: "https://avatars.githubusercontent.com/u/9312044?v=4",
-          email: "164377467@qq.com",
+          email: "to_wyj@126.com",
         };
 
         if (user) {
@@ -69,7 +69,9 @@ export const authOptions: NextAuthOptions = {
       },
     }),
   ],
-
+  pages: {
+    signIn: "/auth/login",
+  },
   session: {
     strategy: "jwt",
   },
