@@ -11,17 +11,17 @@ export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),
   providers: [
     CredentialsProvider({
-      name: "密码登录",
+      name: "Login with password",
       credentials: {
         email: {
-          label: "邮箱",
+          label: "E-mail",
           type: "text",
-          placeholder: "请输入邮箱",
+          placeholder: "Input E-mail address",
         },
         password: {
-          label: "密码",
+          label: "Password",
           type: "password",
-          placeholder: "请输入密码",
+          placeholder: "Input password",
         },
       },
       async authorize(credentials, req) {

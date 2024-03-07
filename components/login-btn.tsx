@@ -27,7 +27,7 @@ export default function Component() {
           className="px-3 py-2 bg-blue-500 text-white rounded"
           onClick={() => signOut()}
         >
-          登出
+          Logout
         </button>
       </div>
     );
@@ -37,7 +37,7 @@ export default function Component() {
       className="px-3 py-2 bg-blue-500 text-white rounded"
       onClick={() => signIn()}
     >
-      登录
+      Login
     </button>
   );
 }
