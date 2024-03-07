@@ -9,7 +9,8 @@ import useSWRInfinite from "swr/infinite";
 import useOnScreen from "@/hooks/useOnScreen";
 //import useOnScreen from '@custom-react-hooks/use-on-screen';
 
-const img1 = 'https://www.rd.com/wp-content/uploads/2020/02/GettyImages-187514202-1.jpg'
+const img1 = 'https://picsum.photos/id/24/160/90'
+const img2 = 'https://picsum.photos/id/24/160/90'
 
 type Props = {
   video: Video & {
@@ -62,7 +63,7 @@ export default function Page({ video }: Props) {
     <div className="max-w-5xl px-3 mx-auto pb-5">
       <h1 className="text-3xl my-4 text-center">{video.title}</h1>
       <div className="text-center">
-        <img src={img1} width={320} height={180} alt={video.title} />
+        <img src={img2} width={320} height={180} alt={video.title} />
       </div>
       <div className="p-3">{video.desc}</div>
       <h2 className="text-xl my-2">Chapter videos</h2>

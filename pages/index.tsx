@@ -17,7 +17,7 @@ export default function Page({ data }: Props) {
   return (
     <div className="max-w-3xl mx-auto">
       <header className="flex justify-between items-center p-3 bg-white shadow">
-        <h1 className="font-bold text-2xl">Next Video</h1>
+        <h1 className="font-bold text-2xl">Next Video Hub</h1>
         <LoginBtn />
       </header>
       <main className="px-3 mt-3">

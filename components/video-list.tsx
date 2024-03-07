@@ -3,7 +3,7 @@ import Link from "next/link";
 //import Image from "next/image";
 import { Video, User } from "@prisma/client";
 
-const img1 = 'https://www.rd.com/wp-content/uploads/2020/02/GettyImages-187514202-1.jpg'
+const img1 = 'https://picsum.photos/id/24/160/90'
 
 type Props = {
   className?: string;
