@@ -25,7 +25,7 @@ export const authOptions: NextAuthOptions = {
         },
       },
       async authorize(credentials, req) {
-        console.log("0000000000000", credentials);
+        console.log(credentials);
         // TODO
         const maybeUser = await prisma.user.findFirst({
           where: {
@@ -33,7 +33,7 @@ export const authOptions: NextAuthOptions = {
           },
         });
 
-        console.log("111111111111", maybeUser);
+        console.log(maybeUser);
 
         // const user = {
         //   id: "cl95b4ny10000fjnuhm7rvys5",
