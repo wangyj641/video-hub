@@ -1,0 +1,7 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`VideoList > it should be render 1`] = `
+<div>
+  <div />
+</div>
+`;
