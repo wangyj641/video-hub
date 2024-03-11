@@ -3,7 +3,9 @@ import Link from "next/link";
 //import Image from "next/image";
 import { Video, User } from "@prisma/client";
 
-const img1 = 'https://picsum.photos/id/24/160/90'
+//const img1 = 'https://picsum.photos/id/24/160/90'
+// use my own image site
+const img1 = 'https://wangyj641.github.io/picx-images-hosting/IMG_20160101_124832.51dwel18fl.webp'
 
 type Props = {
   className?: string;
