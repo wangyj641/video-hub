@@ -6,24 +6,26 @@ Developed with Next.js, react, TailwindCSS, Prisma, postgreSQL, Docker.
 
 ### Key Features:
 
-- Manage videos and browse video list
-- TailwindCSS UI design
+- Login/Logout/Register a new user
 - Credential authentication with NextAuth
 - Github authentication integration
+- Manage video list
+- Play a video
+- TailwindCSS UI design
 
-## Getting Started
+### Getting Started
 
-### Start DB service in Docker
+##### Start DB service in Docker
+```shell
 docker-compose up -d
+```
 
-### Setup .env file
-
-
+##### Setup .env file
 ```js
 DATABASE_URL="postgresql://myuser:mypassword@localhost:5432/median-db"
 
-GITHUB_ID='Iv1.92fee79258464330'
-GITHUB_SECRET='57f14c11716ca87e03573181ac8f168cde43f714'
+GITHUB_ID='81be641fa35f0b0e7044'
+GITHUB_SECRET='467f95c35cbcb795f8086a5ebb78a2de74d40dcb'
 
 EMAIL_SERVER_PASSWORD=MWRSQATPFJDEHWJJ
 EMAIL_SERVER_HOST=smtp.126.com
@@ -31,20 +33,17 @@ EMAIL_SERVER_PORT=25
 EMAIL_FROM=Video Hub Admin <to_wyj@126.com>
 ```
 
-### Setup DB
-
+##### Setup DB
 ```shell
 npx prisma migrate dev --name "init"
 ```
 
-### Generate test data
-
+##### Generate test data
 ```shell
 npx ts-node ./prisma/seed.ts
 ```
 
-### Start the app
-
+##### Start the app
 ```shell
 npm run dev
 ```
