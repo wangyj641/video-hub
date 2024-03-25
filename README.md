@@ -1,4 +1,4 @@
-# Video Hub
+# video-hub
 
 Video collection
 
