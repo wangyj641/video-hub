@@ -3,9 +3,7 @@ import Link from "next/link";
 //import Image from "next/image";
 import { Video, User } from "@prisma/client";
 
-//const img1 = 'https://picsum.photos/id/24/160/90'
-// use my own image site
-const img1 = 'https://wangyj641.github.io/picx-images-hosting/IMG_20160101_124832.51dwel18fl.webp'
+const img1 = 'https://github.com/wangyj641/picx-images-hosting/raw/master/petals-8307378_1280.2yy4m2z6l7.webp'
 
 type Props = {
   className?: string;
@@ -23,8 +21,6 @@ type ItemProps = {
     author: User;
   };
 };
-
-
 
 function VideoItem({ item, horizontal, editable }: ItemProps) {
   return (
